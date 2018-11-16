@@ -41,6 +41,7 @@ app.post("/api/login", (req, res) => {
       user
     },
     "secretkey",
+    { expiresIn: "30s" },
     (err, token) => {
       res.json({
         token
